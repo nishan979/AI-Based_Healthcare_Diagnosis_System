@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Patient Portal - Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js for any charts you want to display -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>PatientPortal</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active">
+          <a href="index.html" class="icon-dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="bookings.html" class="icon-bookings">My Bookings</a>
+        </li>
+        <li>
+          <a href="messages.php" class="icon-messages">Messages</a>
+        </li>
+        <li>
+          <a href="reviews.html" class="icon-reviews">Reviews</a>
+        </li>
+        <li>
+          <a href="bookmarks.html" class="icon-bookmarks">Bookmarks</a>
+        </li>
+        <li>
+          <a href="prescription.php" class="icon-prescription">Prescription</a>
+        </li>
+        <li>
+          <a href="medical_report.php" class="icon-medical-reports">Medical Reports</a>
+        </li>
+        <li>
+          <a href="profile.php" class="icon-profile">My Profile</a>
+        </li>
+        <li>
+          <a href="logout.php" class="icon-logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- HEADER -->
+      <header>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search..." />
+          <i class="icon icon-search"></i>
+        </div>
+        <div class="user-wrapper">
+          <img src="https://via.placeholder.com/40" alt="User" />
+          <div>
+            <h4>John Doe</h4>
+            <small>Patient</small>
+          </div>
+        </div>
+      </header>
+
+      <!-- DASHBOARD CONTENT -->
+      <main>
+        <h2 class="dash-title">Dashboard</h2>
+
+        <!-- Patient Summary Section -->
+        <section class="summary">
+          <h3>Welcome, John Doe</h3>
+          <p>Age: 30 | Blood Group: O+</p>
+          <p>Last Appointment: March 20, 2025</p>
+          <p>Next Appointment: April 10, 2025</p>
+        </section>
+
+        <!-- Quick Access Cards -->
+        <div class="quick-access">
+          <div class="card">
+            <h4>📅 Upcoming Appointments</h4>
+            <p>Dr. Smith - April 10, 2025</p>
+          </div>
+          <div class="card">
+            <h4>💊 Latest Prescriptions</h4>
+            <p>Paracetamol - 2 times a day</p>
+          </div>
+          <div class="card">
+            <h4>🏥 Medical Reports</h4>
+            <p>Blood Test - March 15, 2025</p>
+          </div>
+          <div class="card">
+            <h4>📩 Messages from Doctor</h4>
+            <p>No new messages</p>
+          </div>
+        </div>
+
+        <!-- Health Statistics (optional second chart) -->
+        <section class="health-stats">
+          <h3>📊 Health Statistics</h3>
+          <div class="chart-container">
+            <canvas id="healthChart"></canvas>
+          </div>
+        </section>
+
+        <!-- Example chart section for Appointments Overview -->
+        <section class="recent">
+          <div class="activity-grid">
+            <div class="activity-card">
+              <h3>Appointments Overview</h3>
+              <div class="chart-container">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notifications & Alerts -->
+        <section class="notifications">
+          <h3>🔔 Notifications</h3>
+          <ul>
+            <li>Take BP Medicine at 8 PM</li>
+            <li>Upcoming appointment in 2 days</li>
+          </ul>
+        </section>
+
+        <!-- AI Chatbot / Symptom Checker -->
+        <section class="chatbot">
+          <h3>🤖 Symptom Checker</h3>
+          <input type="text" placeholder="Enter symptoms..." />
+          <button>Check</button>
+        </section>
+
+        <!-- Recent Activity Log -->
+        <section class="activity-log">
+          <h3>📜 Recent Activity</h3>
+          <ul>
+            <li>Appointment with Dr. Smith - March 10</li>
+            <li>Prescription Updated - March 12</li>
+          </ul>
+        </section>
+
+        <!-- Emergency Contact / Quick Actions -->
+        <section class="quick-actions">
+          <h3>🆘 Emergency Contact</h3>
+          <button>Call Emergency</button>
+          <button>Find Nearest Hospital</button>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

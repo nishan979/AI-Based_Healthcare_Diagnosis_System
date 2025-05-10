@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doctor Portal – Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js (optional for stats) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>DoctorPortal</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active">
+          <a href="doctor_index.html" class="icon-dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="doctor_appointments.html" class="icon-bookings">Appointments</a>
+        </li>
+        <li>
+          <a href="message_patient.php" class="icon-profile">Message</a>
+        </li>
+        <li>
+          <a href="doctor_reviews.html" class="icon-reviews">Review</a>
+        </li>
+        <li>
+          <a href="doctor_prescription_generator.php" class="icon-prescription">Prescription Generator</a>
+        </li>
+        <li>
+          <a href="doctor_medical_reports.php" class="icon-medical-reports">Patient Medical Report</a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- HEADER -->
+      <header>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search…" />
+          <i class="icon icon-search"></i>
+        </div>
+        <div class="user-wrapper">
+          <img src="https://via.placeholder.com/40" alt="Doctor" />
+          <div>
+            <h4>Dr. John Smith</h4>
+            <small>Cardiologist</small>
+          </div>
+        </div>
+      </header>
+
+      <!-- DASHBOARD CONTENT -->
+      <main>
+        <h2 class="dash-title">Dashboard</h2>
+
+        <!-- Summary -->
+        <section class="summary">
+          <h3>Welcome back, Dr. Smith</h3>
+          <p>Today is <span id="todayDate"></span>.</p>
+          <p>You have <strong>8</strong> appointments scheduled and <strong>3</strong> reports awaiting review.</p>
+        </section>
+
+        <!-- Quick Access Cards -->
+        <div class="quick-access">
+          <a href="doctor_appointments.html" class="card">
+            <h4>📅 Today's Appointments</h4>
+            <p>8 Scheduled</p>
+          </a>
+          <a href="doctor_medical_reports.html" class="card">
+            <h4>📁 Pending Reports</h4>
+            <p>3 Awaiting Review</p>
+          </a>
+          <a href="doctor_reviews.html" class="card">
+            <h4>⭐ Patient Reviews</h4>
+            <p>4.8 ★ Average</p>
+          </a>
+          <a href="doctor_prescription_generator.html" class="card">
+            <h4>💊 Prescriptions</h4>
+            <p>Create / View</p>
+          </a>
+        </div>
+
+        <!-- Appointments Overview Chart -->
+        <section class="recent">
+          <div class="activity-grid">
+            <div class="activity-card">
+              <h3>Weekly Appointments</h3>
+              <div class="chart-container">
+                <canvas id="appointmentsChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="notifications">
+          <h3>🔔 Notifications</h3>
+          <ul>
+            <li>New lab report uploaded by Jane Doe.</li>
+            <li>Mark Lee left a 4‑star review.</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- JavaScript to render chart and date -->
+  <script>
+    // Display current date
+    document.getElementById("todayDate").textContent = new Date().toLocaleDateString();
+
+    // Render appointments chart
+    const ctx = document.getElementById("appointmentsChart");
+    if (ctx) {
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          datasets: [
+            {
+              label: "Appointments",
+              data: [5, 7, 6, 8, 4, 3, 2],
+              borderColor: "#4a69bd",
+              fill: false,
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true },
+          },
+        },
+      });
+    }
+  </script>
+</body>
+</html>

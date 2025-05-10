@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews - Patient Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>PatientPortal</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html" class="icon-dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="bookings.html" class="icon-bookings">My Bookings</a>
+        </li>
+        <li>
+          <a href="messages.php" class="icon-messages">Messages</a>
+        </li>
+        <li class="active">
+          <a href="reviews.html" class="icon-reviews">Reviews</a>
+        </li>
+        <li>
+          <a href="bookmarks.html" class="icon-bookmarks">Bookmarks</a>
+        </li>
+        <li>
+          <a href="prescription.php" class="icon-prescription">Prescription</a>
+        </li>
+        <li>
+          <a href="medical_report.php" class="icon-medical-reports">Medical Reports</a>
+        </li>
+        <li>
+          <a href="profile.php" class="icon-profile">My Profile</a>
+        </li>
+        <li>
+          <a href="logout.php" class="icon-logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- HEADER -->
+      <header>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search..." />
+          <i class="icon icon-search"></i>
+        </div>
+        <div class="user-wrapper">
+          <img src="https://via.placeholder.com/40" alt="User" />
+          <div>
+            <h4>John Doe</h4>
+            <small>Patient</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h2>Review a Doctor</h2>
+        <form class="review-form">
+          <label for="doctor">Doctor Name:</label>
+          <select id="doctor" name="doctor">
+            <option>Dr. Smith</option>
+            <option>Dr. Jane</option>
+            <!-- Populate with actual past doctors -->
+          </select>
+
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating">
+            <option value="1">1 - Poor</option>
+            <option value="2">2</option>
+            <option value="3">3 - Average</option>
+            <option value="4">4</option>
+            <option value="5">5 - Excellent</option>
+          </select>
+
+          <label for="reviewText">Review:</label>
+          <textarea id="reviewText" name="reviewText" rows="4"></textarea>
+
+          <button type="submit">Submit Review</button>
+        </form>
+
+        <div class="reviews-list">
+          <h3>Your Reviews</h3>
+          <div class="review-item">
+            <strong>Dr. Smith</strong> - <em>5 stars</em>
+            <p>Great service and very professional.</p>
+            <span class="date">2025-03-20</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

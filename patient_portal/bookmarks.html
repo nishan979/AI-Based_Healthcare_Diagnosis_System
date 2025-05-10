@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bookmarks - Patient Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>PatientPortal</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="index.html" class="icon-dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="bookings.html" class="icon-bookings">My Bookings</a>
+        </li>
+        <li>
+          <a href="messages.php" class="icon-messages">Messages</a>
+        </li>
+        <li>
+          <a href="reviews.html" class="icon-reviews">Reviews</a>
+        </li>
+        <li class="active">
+          <a href="bookmarks.html" class="icon-bookmarks">Bookmarks</a>
+        </li>
+        <li>
+          <a href="prescription.php" class="icon-prescription">Prescription</a>
+        </li>
+        <li>
+          <a href="medical_report.php" class="icon-medical-reports">Medical Reports</a>
+        </li>
+        <li>
+          <a href="profile.php" class="icon-profile">My Profile</a>
+        </li>
+        <li>
+          <a href="logout.php" class="icon-logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- HEADER -->
+      <header>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search..." />
+          <i class="icon icon-search"></i>
+        </div>
+        <div class="user-wrapper">
+          <img src="https://via.placeholder.com/40" alt="User" />
+          <div>
+            <h4>John Doe</h4>
+            <small>Patient</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h2>Bookmarked Doctors</h2>
+        <ul class="bookmark-list">
+          <li>
+            <h4>Dr. Smith</h4>
+            <p>Cardiology</p>
+            <a href="#">View Profile</a>
+          </li>
+          <li>
+            <h4>Dr. Jane</h4>
+            <p>Dermatology</p>
+            <a href="#">View Profile</a>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

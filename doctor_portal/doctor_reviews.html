@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews – Doctor Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>DoctorPortal</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li class>
+          <a href="doctor_index.html" class="icon-dashboard">Dashboard</a>
+        </li>
+        <li>
+          <a href="doctor_appointments.html" class="icon-bookings">Appointments</a>
+        </li>
+        <li>
+          <a href="message_patient.php" class="icon-profile">Message Patient</a>
+        </li>
+        <li class="active">
+          <a href="doctor_reviews.html" class="icon-reviews">Review</a>
+        </li>
+        <li>
+          <a href="doctor_prescription_generator.php" class="icon-prescription">Prescription Generator</a>
+        </li>
+        <li>
+          <a href="doctor_medical_reports.php" class="icon-medical-reports">Patient Medical Report</a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- HEADER -->
+      <header>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search reviews…" />
+          <i class="icon icon-search"></i>
+        </div>
+        <div class="user-wrapper">
+          <img src="https://via.placeholder.com/40" alt="Doctor" />
+          <div>
+            <h4>Dr. John Smith</h4>
+            <small>Cardiologist</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h2>Patient Reviews</h2>
+        <div class="reviews-list">
+          <div class="review-item">
+            <strong>Jane Doe</strong> – <em>5 stars</em>
+            <p>Excellent consultation and clear explanations.</p>
+            <span class="date">2025‑04‑02</span>
+          </div>
+          <div class="review-item">
+            <strong>Mark Lee</strong> – <em>4 stars</em>
+            <p>Helpful but waiting time was long.</p>
+            <span class="date">2025‑03‑28</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Appointments – Doctor Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>DoctorPortal</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li class>
+          <a href="doctor_index.html" class="icon-dashboard">Dashboard</a>
+        </li>
+        <li class="active">
+          <a href="doctor_appointments.html" class="icon-bookings">Appointments</a>
+        </li>
+        <li>
+          <a href="message_patient.php" class="icon-profile">Message Patient</a>
+        </li>
+        <li>
+          <a href="doctor_reviews.html" class="icon-reviews">Review</a>
+        </li>
+        <li>
+          <a href="doctor_prescription_generator.php" class="icon-prescription">Prescription Generator</a>
+        </li>
+        <li>
+          <a href="doctor_medical_reports.php" class="icon-medical-reports">Patient Medical Report</a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-logout">Logout</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- HEADER -->
+      <header>
+        <div class="search-wrapper">
+          <input type="search" placeholder="Search appointments…" />
+          <i class="icon icon-search"></i>
+        </div>
+        <div class="user-wrapper">
+          <img src="https://via.placeholder.com/40" alt="Doctor" />
+          <div>
+            <h4>Dr. John Smith</h4>
+            <small>Cardiologist</small>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <h2>Appointments</h2>
+        <table class="appointment-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Patient Name</th>
+              <th>Reason</th>
+              <th>Video Call</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025‑04‑10</td>
+              <td>09:00 AM</td>
+              <td>Jane Doe</td>
+              <td>Follow‑up</td>
+              <td><a href="#">Join</a></td>
+            </tr>
+            <tr>
+              <td>2025‑04‑10</td>
+              <td>10:30 AM</td>
+              <td>Mark Lee</td>
+              <td>Chest Pain</td>
+              <td><a href="#">Join</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
