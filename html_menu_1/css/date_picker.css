@@ -372,6 +372,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .open .dropdown-toggle.datepicker table tr td.selected.disabled:hover {
   border-color: #373737;
 }
+
 .datepicker table tr td.selected:hover color: #ffffff,
 .datepicker table tr td.selected:hover:hover color: #ffffff,
 .datepicker table tr td.selected.disabled:hover color: #ffffff,

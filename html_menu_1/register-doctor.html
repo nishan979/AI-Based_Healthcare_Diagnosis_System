@@ -7,9 +7,9 @@
       name="description"
       content="Find easily a doctor and book online an appointment"
     />
-    <meta name="author" content="Ansonika" />
+    <meta name="author" content="Nishan" />
     <title>
-      FINDOCTOR - Find easily a doctor and book online an appointment
+      DocExpress - Find easily a doctor and book online an appointment
     </title>
 
     <!-- Favicons-->
@@ -138,7 +138,12 @@
             <!-- /col -->
             <div class="col-lg-5 ml-auto">
               <div class="box_form">
-                <form>
+                <div id="message-register"></div>
+                <form
+                  method="post"
+                  action="assets/register_doctor.php"
+                  id="register_doctor"
+                >
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -146,6 +151,8 @@
                           type="text"
                           class="form-control"
                           placeholder="Name"
+                          name="name_register"
+                          id="name_register"
                         />
                       </div>
                     </div>
@@ -155,6 +162,8 @@
                           type="text"
                           class="form-control"
                           placeholder="Last Name"
+                          name="lastname_register"
+                          id="lastname_register"
                         />
                       </div>
                     </div>
@@ -167,6 +176,8 @@
                           type="text"
                           class="form-control"
                           placeholder="Specialization"
+                          name="specialization"
+                          id="specialization"
                         />
                       </div>
                     </div>
@@ -179,14 +190,37 @@
                           type="text"
                           class="form-control"
                           placeholder="City"
+                          name="city_register"
+                          id="city_register"
                         />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <select class="form-select">
+                        <select
+                          class="form-select"
+                          name="country_register"
+                          id="country_register"
+                        >
                           <option value="">Country</option>
+                          <option value="Europe">Europe</option>
+                          <option value="Asia">Asia</option>
+                          <option value="Unated States">Unated States</option>
                         </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /row -->
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Address"
+                          name="address_register"
+                          id="address_register"
+                        />
                       </div>
                     </div>
                   </div>
@@ -198,6 +232,8 @@
                           type="text"
                           class="form-control"
                           placeholder="Mobile Phone"
+                          name="mobile_register"
+                          id="mobile_register"
                         />
                       </div>
                     </div>
@@ -207,6 +243,8 @@
                           type="text"
                           class="form-control"
                           placeholder="Office Phone"
+                          name="office_phone_register"
+                          id="office_phone_register"
                         />
                       </div>
                     </div>
@@ -219,20 +257,33 @@
                           type="email"
                           class="form-control"
                           placeholder="Email Address"
+                          name="email_register"
+                          id="email_register"
                         />
                       </div>
                     </div>
                   </div>
                   <!-- /row -->
-                  <p class="text-center add_top_30">
-                    <input type="submit" class="btn_1" value="Submit" />
-                  </p>
-                  <div class="text-center">
-                    <small
-                      >Ut nam graece accumsan cotidieque. Has voluptua vivendum
-                      accusamus cu. Ut per assueverit temporibus
-                      dissentiet.</small
-                    >
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          id="verify_register"
+                          class="form-control"
+                          placeholder="Human verify: 3 + 1 =?"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /row -->
+                  <div>
+                    <input
+                      type="submit"
+                      class="btn_1"
+                      value="Submit"
+                      id="submit-register"
+                    />
                   </div>
                 </form>
               </div>
@@ -278,7 +329,7 @@
             <ul class="links">
               <li><a href="grid-list.html">Doctors</a></li>
               <li><a href="grid-list.html">Specialization</a></li>
-              <li><a href="#0">Join as a Doctor</a></li>
+              <li><a href="register-doctor.html">Join as a Doctor</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-4">
@@ -299,19 +350,19 @@
               <h5>Follow us</h5>
               <ul>
                 <li>
-                  <a href="#0"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-tiktok"></i></a>
+                  <a href="https://www.tiktok.com/"><i class="bi bi-tiktok"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
                 </li>
               </ul>
             </div>
@@ -322,12 +373,12 @@
         <div class="row">
           <div class="col-md-8">
             <ul id="additional_links">
-              <li><a href="#0">Terms and conditions</a></li>
-              <li><a href="#0">Privacy</a></li>
+              <li><a href="terms.html">Terms and conditions</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
             </ul>
           </div>
           <div class="col-md-4">
-            <div id="copy">© 2023 Findoctor</div>
+            <div id="copy">© 2025 DocExpress</div>
           </div>
         </div>
       </div>
@@ -341,5 +392,42 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="assets/validate.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+                <a href="#" id="logoutLink">
+                    Logout
+                </a>
+            `;
+
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
   </body>
 </html>

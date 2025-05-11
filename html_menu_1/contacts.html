@@ -98,61 +98,32 @@
     <!-- /Header -->
 
     <main>
-      <div id="map_contact"></div>
-      <!-- /map -->
-
       <div class="container margin_60_35">
         <div class="row">
           <aside class="col-lg-3 col-md-4">
             <div id="contact_info">
-              <h3>Contacts info</h3>
+              <h3>Contact Information</h3>
               <p>
-                11 Fifth Ave - New York, US<br />
-                + 61 (2) 8093 3400<br />
-                <a href="#">info@domain.com</a>
+                Kuril Bishwaroad, Dhaka, Bangladesh<br />
+                <strong>Phone:</strong>
+                <a href="tel:+8801634664389">+8801634664389</a><br />
+                <strong>Email:</strong>
+                <a href="mailto:nishanshish@gmail.com">nishanshish@gmail.com</a>
               </p>
-              <h4>Get directions</h4>
-              <form
-                action="http://maps.google.com/maps"
-                method="get"
-                target="_blank"
-              >
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="saddr"
-                    placeholder="Enter your location"
-                    class="form-control styled"
-                  />
-                  <input
-                    type="hidden"
-                    name="daddr"
-                    value="New York, NY 11430"
-                  />
-                  <!-- Write here your end point -->
-                </div>
-                <input
-                  type="submit"
-                  value="Get directions"
-                  class="btn_1 add_bottom_45"
-                />
-              </form>
+              <h4>Support Hours</h4>
               <ul>
                 <li>
-                  <strong>Administration</strong>
-                  <a href="tel://003823932342">0038 23932342</a><br /><a
-                    href="tel://003823932342"
-                    >admin@findoctor.com</a
-                  ><br />
-                  <small>Monday to Friday 9am - 7pm</small>
+                  <strong>Customer Support</strong><br />
+                  Available 24/7<br />
+                  <a href="tel:+8801634664389">Call Us</a> |
+                  <a href="mailto:nishanshish@gmail.com">Email Us</a>
                 </li>
                 <li>
-                  <strong>General questions</strong>
-                  <a href="tel://003823932342">0038 23932342</a><br /><a
-                    href="tel://003823932342"
-                    >questions@findoctor.com</a
-                  ><br />
-                  <p><small>Monday to Friday 9am - 7pm</small></p>
+                  <strong>Business Inquiries</strong><br />
+                  Monday to Friday, 9 AM – 6 PM<br />
+                  <a href="mailto:nishanshish@gmail.com"
+                    >business@docexpress.com</a
+                  >
                 </li>
               </ul>
             </div>
@@ -160,24 +131,24 @@
           <!--/aside -->
           <div class="col-lg-8 col-md-8 ml-auto">
             <div class="box_general">
-              <h3>Contact us</h3>
-              <p>Mussum ipsum cacilds, vidis litro abertis.</p>
+              <h3>Contact Us</h3>
+              <p>
+                Have a question or need help? We're here for you. Just fill out
+                the form below, and we’ll get back to you shortly.
+              </p>
               <div>
                 <div id="message-contact"></div>
-                <form
-                  method="post"
-                  action="assets/contact.php"
-                  id="contactform"
-                >
+                <form method="post" id="contactform">
+                  <!-- Match JavaScript -->
                   <div class="row">
                     <div class="col-md-6 col-sm-6">
                       <div class="form-group">
                         <input
                           type="text"
                           class="form-control"
-                          id="name_contact"
                           name="name_contact"
-                          placeholder="Name"
+                          placeholder="First Name"
+                          required
                         />
                       </div>
                     </div>
@@ -186,9 +157,8 @@
                         <input
                           type="text"
                           class="form-control"
-                          id="lastname_contact"
                           name="lastname_contact"
-                          placeholder="Last name"
+                          placeholder="Last Name"
                         />
                       </div>
                     </div>
@@ -198,10 +168,10 @@
                       <div class="form-group">
                         <input
                           type="email"
-                          id="email_contact"
                           name="email_contact"
                           class="form-control"
                           placeholder="Email"
+                          required
                         />
                       </div>
                     </div>
@@ -209,10 +179,9 @@
                       <div class="form-group">
                         <input
                           type="text"
-                          id="phone_contact"
                           name="phone_contact"
                           class="form-control"
-                          placeholder="Phone number"
+                          placeholder="Phone Number"
                         />
                       </div>
                     </div>
@@ -222,23 +191,23 @@
                       <div class="form-group">
                         <textarea
                           rows="5"
-                          id="message_contact"
                           name="message_contact"
                           class="form-control"
-                          style="height: 100px"
-                          placeholder="Hello world!"
+                          placeholder="Your message"
+                          required
                         ></textarea>
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="form-group">
                         <input
                           type="text"
-                          id="verify_contact"
                           class="form-control"
-                          placeholder=" 3 + 1 ="
+                          name="verify_contact"
+                          placeholder="What is 2+2? (Enter 4 to verify)"
+                          required
                         />
                       </div>
                     </div>
@@ -247,11 +216,9 @@
                     type="submit"
                     value="Submit"
                     class="btn_1 add_top_20"
-                    id="submit-contact"
                   />
                 </form>
               </div>
-              <!-- /col -->
             </div>
           </div>
           <!-- /col -->
@@ -260,6 +227,7 @@
       </div>
       <!-- /container -->
     </main>
+
     <!-- /main -->
 
     <footer>
@@ -292,7 +260,7 @@
             <ul class="links">
               <li><a href="grid-list.html">Doctors</a></li>
               <li><a href="grid-list.html">Specialization</a></li>
-              <li><a href="#0">Join as a Doctor</a></li>
+              <li><a href="register-doctor.html">Join as a Doctor</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-4">
@@ -313,19 +281,27 @@
               <h5>Follow us</h5>
               <ul>
                 <li>
-                  <a href="#0"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.facebook.com/"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-tiktok"></i></a>
+                  <a href="https://www.tiktok.com/"
+                    ><i class="bi bi-tiktok"></i
+                  ></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.whatsapp.com/"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
                 </li>
               </ul>
             </div>
@@ -336,12 +312,12 @@
         <div class="row">
           <div class="col-md-8">
             <ul id="additional_links">
-              <li><a href="#0">Terms and conditions</a></li>
-              <li><a href="#0">Privacy</a></li>
+              <li><a href="terms.html">Terms and conditions</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
             </ul>
           </div>
           <div class="col-md-4">
-            <div id="copy">© 2023 Findoctor</div>
+            <div id="copy">© 2025 DocExpress</div>
           </div>
         </div>
       </div>
@@ -456,6 +432,47 @@
             });
         }
       });
+    </script>
+
+    <script>
+      document
+        .getElementById("contactform")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          try {
+            // Get form data
+            const formData = new FormData(e.target);
+            const data = {
+              name_contact: formData.get("name_contact"),
+              lastname_contact: formData.get("lastname_contact"),
+              email_contact: formData.get("email_contact"),
+              phone_contact: formData.get("phone_contact"),
+              message_contact: formData.get("message_contact"),
+              verify_contact: formData.get("verify_contact"),
+            };
+
+            // Send to server
+            const response = await fetch("/contact", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+              const error = await response.text();
+              throw new Error(error);
+            }
+
+            alert(await response.text());
+            e.target.reset();
+          } catch (error) {
+            console.error("Submission error:", error);
+            alert(error.message);
+          }
+        });
     </script>
   </body>
 </html>

@@ -10,6 +10,8 @@
     {
       "id": 1,
       "name": "Prof. Dr. Shishir Basak",
+      "email": "shishir@example.com",
+      "password": "pass123",
       "specialty": "Medicine and Cardiology",
       "qualifications": "MBBS, MCPS (Medicine), MRCP(UK), D.Card (DU), MD (Cardiology)",
       "hospital": "Mount Adora Hospital, Akhalia",
@@ -27,6 +29,8 @@
     {
       "id": 2,
       "name": "Prof. Dr. Md. Nazrul Islam",
+      "email": "nazrul@example.com",
+      "password": "pass123",
       "specialty": "Neuro Medicine Specialist",
       "qualifications": "MBBS, MCPS (Medicine), MD(Neurology)",
       "hospital": "Mount Adora Hospital, Akhalia",
@@ -44,6 +48,8 @@
     {
       "id": 3,
       "name": "Prof. Dr. Muhammad Shahabuddin",
+      "email": "shahabuddin@example.com",
+      "password": "pass123",
       "specialty": "Clinical & Interventional Cardiologist",
       "qualifications": "MBBS, MD (Cardiology), FACC (USA)",
       "hospital": "Mount Adora Hospital, Akhalia",
@@ -61,6 +67,8 @@
     {
       "id": 4,
       "name": "Dr. Alamgir Chowdhury",
+      "email": "alamgir@example.com",
+      "password": "pass123",
       "specialty": "Kidney Diseases & Medicine Specialist",
       "qualifications": "MBBS, MCPS(Medicine), MD(Nephrology)",
       "hospital": "Mount Adora Hospital, Akhalia",
@@ -78,6 +86,8 @@
     {
       "id": 5,
       "name": "Dr. Rahat Amin Chowdhury",
+      "email": "rahat@example.com",
+      "password": "pass123",
       "specialty": "Neurology Specialist",
       "qualifications": "MBBS, MD(Neurology)",
       "hospital": "Al Haramain Hospital Pvt. Ltd",
@@ -95,6 +105,8 @@
     {
       "id": 6,
       "name": "Prof. Dr. Md. Matiur Rahman",
+      "email": "matiur@example.com",
+      "password": "pass123",
       "specialty": "Neuro Medicine Specialist",
       "qualifications": "MBBS, FCPS (Medicine), MD(Neurology)",
       "hospital": "Mount Adora Hospital, Akhalia",

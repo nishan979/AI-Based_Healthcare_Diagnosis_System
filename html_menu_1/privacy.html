@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Find easily a doctor and book online an appointment"
+    />
+    <meta name="author" content="Nishan" />
+    <title>
+      DocExpress - Find easily a doctor and book online an appointment
+    </title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      href="img/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="144x144"
+      href="img/apple-touch-icon-144x144-precomposed.png"
+    />
+
+    <!-- GOOGLE WEB FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/vendors.css" rel="stylesheet" />
+    <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet" />
+
+    <!-- SPECIFIC CSS -->
+    <link href="css/vegas.min.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+    <!-- End Preload -->
+
+    <header class="header_sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <div id="logo_home">
+              <h1><a href="index.html" title="Findoctor">Findoctor</a></h1>
+            </div>
+          </div>
+          <nav class="col-lg-9 col-6">
+            <a
+              class="cmn-toggle-switch cmn-toggle-switch__htx open_close"
+              href="#0"
+              ><span>Menu mobile</span>
+            </a>
+            <div class="main-menu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grid-list.html">Doctors</a></li>
+                <li><a href="detail-page.html">Appointment</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Sign Up</a></li>
+              </ul>
+            </div>
+            <!-- /main-menu -->
+          </nav>
+        </div>
+      </div>
+      <!-- /container -->
+    </header>
+    <!-- /header -->
+
+    <main>
+      <div class="container my-5">
+        <div class="main_title text-center mb-4">
+          <h2>Privacy <strong>Policy</strong></h2>
+          <p>
+            Learn how DocExpress collects, uses, and protects your personal
+            information.
+          </p>
+        </div>
+
+        <div class="accordion" id="privacyAccordion">
+          <div class="card">
+            <div class="card-header" id="privacyOne">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapsePrivacyOne"
+              >
+                1. Information We Collect
+              </button>
+            </div>
+            <div
+              id="collapsePrivacyOne"
+              class="collapse show"
+              data-parent="#privacyAccordion"
+            >
+              <div class="card-body">
+                <p>
+                  We collect various types of information to provide and improve
+                  our services:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Personal Identifiable Information (PII):</strong>
+                    Name, email, phone number, gender, DOB, address
+                  </li>
+                  <li>
+                    <strong>Health & Appointment Info:</strong> Symptoms,
+                    diagnosis, prescriptions
+                  </li>
+                  <li>
+                    <strong>Technical Data:</strong> IP address, device, browser
+                    info, usage logs
+                  </li>
+                  <li>
+                    <strong>Location Data:</strong> To locate nearby
+                    clinics/doctors (with permission)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="privacyTwo">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapsePrivacyTwo"
+              >
+                2. How We Use Your Information
+              </button>
+            </div>
+            <div
+              id="collapsePrivacyTwo"
+              class="collapse"
+              data-parent="#privacyAccordion"
+            >
+              <div class="card-body">
+                <ul>
+                  <li>To manage accounts and enable appointments</li>
+                  <li>To improve app functionality and provide support</li>
+                  <li>To personalize content and analyze user behavior</li>
+                  <li>To comply with legal obligations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="privacyThree">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapsePrivacyThree"
+              >
+                3. How We Share Your Information
+              </button>
+            </div>
+            <div
+              id="collapsePrivacyThree"
+              class="collapse"
+              data-parent="#privacyAccordion"
+            >
+              <div class="card-body">
+                <p>We do not sell your data. We may share it with:</p>
+                <ul>
+                  <li>
+                    <strong>Doctors and Clinics:</strong> For consultation and
+                    medical purposes
+                  </li>
+                  <li>
+                    <strong>Service Providers:</strong> For hosting, analytics,
+                    cloud support
+                  </li>
+                  <li>
+                    <strong>Legal Authorities:</strong> If legally required
+                  </li>
+                  <li>
+                    <strong>Business Transfers:</strong> In case of mergers or
+                    acquisitions
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="privacyFour">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapsePrivacyFour"
+              >
+                4. Data Storage and Retention
+              </button>
+            </div>
+            <div
+              id="collapsePrivacyFour"
+              class="collapse"
+              data-parent="#privacyAccordion"
+            >
+              <div class="card-body">
+                <p>
+                  Your data is stored securely with encryption. We retain data
+                  as long as necessary for service provision and legal
+                  compliance. You may request data deletion anytime by
+                  contacting us.
+                </p>
+                <p>
+                  We take reasonable measures to protect your data from
+                  unauthorized access, loss, or misuse. However, no method of
+                  transmission over the internet or electronic storage is 100%
+                  secure.
+                </p>
+                <p>
+                  We may update this policy from time to time. We will notify
+                  you of any significant changes via email or through our app.
+                </p>
+                <p>
+                  By using our services, you consent to the collection and use
+                  of your information as described in this policy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="privacyFive">
+              <button
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapsePrivacyFive"
+              >
+                5. Your Rights
+              </button>
+            </div>
+            <div
+              id="collapsePrivacyFive"
+              class="collapse"
+              data-parent="#privacyAccordion"
+            >
+              <div class="card-body">
+                <ul>
+                  <li>Access, correct, or delete your data</li>
+                  <li>Withdraw consent or stop processing</li>
+                  <li>Request data portability</li>
+                </ul>
+                <p>
+                  Email your requests to:
+                  <strong>support@docexpress.com</strong>
+                </p>
+                <p>
+                  We will respond to your requests within a reasonable
+                  timeframe.
+                </p>
+                <p>
+                  We may need to verify your identity before processing
+                  requests.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button id="showPrivacyMoreBtn" class="btn btn-outline-info">
+            Show More Details
+          </button>
+        </div>
+
+        <div id="extraPrivacy" class="mt-4">
+          <h5>Additional Privacy Practices</h5>
+          <p>
+            We retain your personal information for as long as necessary to
+            fulfill the purposes outlined in this policy, unless a longer
+            retention period is required by law.
+          </p>
+          <p>
+            Our platform may contain links to third-party websites. We are not
+            responsible for the privacy practices of those sites and encourage
+            you to read their policies.
+          </p>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- /main content -->
+    <footer>
+      <div class="container margin_60_35">
+        <div class="row">
+          <div class="col-lg-3 col-md-12">
+            <p>
+              <a href="index.html" title="Findoctor">
+                <img
+                  src="img/logo.png"
+                  alt=""
+                  width="163"
+                  height="36"
+                  class="img-fluid"
+                />
+              </a>
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h5>About</h5>
+            <ul class="links">
+              <li><a href="about.html">About us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h5>Useful links</h5>
+            <ul class="links">
+              <li><a href="grid-list.html">Doctors</a></li>
+              <li><a href="grid-list.html">Specialization</a></li>
+              <li><a href="register-doctor.html">Join as a Doctor</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h5>Contact with Us</h5>
+            <ul class="contacts">
+              <li>
+                <a href="tel://1634664389"
+                  ><i class="icon_mobile"></i> + 880 16346 64389</a
+                >
+              </li>
+              <li>
+                <a href="mailto:help@docexpress.com"
+                  ><i class="icon_mail_alt"></i> help@DocExpress.com</a
+                >
+              </li>
+            </ul>
+            <div class="follow_us">
+              <h5>Follow us</h5>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/"
+                    ><i class="bi bi-tiktok"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.whatsapp.com/"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+        <hr />
+        <div class="row">
+          <div class="col-md-8">
+            <ul id="additional_links">
+              <li><a href="terms.html">Terms and conditions</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div id="copy">© 2025 DocExpress</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/footer-->
+
+    <div id="toTop"></div>
+    <!-- Back to top button -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/functions.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("showPrivacyMoreBtn")
+        .addEventListener("click", function () {
+          const privacyDetails = document.getElementById("extraPrivacy");
+          if (
+            privacyDetails.style.display === "none" ||
+            privacyDetails.style.display === ""
+          ) {
+            privacyDetails.style.display = "block";
+            this.textContent = "Hide Details";
+          } else {
+            privacyDetails.style.display = "none";
+            this.textContent = "Show More Details";
+          }
+        });
+    </script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="js/vegas.min.js"></script>
+    <script>
+      $(function () {
+        "use strict";
+        $(".hero_kenburns").vegas({
+          slides: [
+            { src: "img/slides/1.jpg" },
+            { src: "img/slides/3.jpg" },
+            { src: "img/slides/2.jpg" },
+          ],
+          overlay: false,
+          transition: "fade2",
+          animation: "kenburnsUpRight",
+          transitionDuration: 1000,
+          delay: 5000,
+          animationDuration: 30000,
+        });
+      });
+    </script>
+
+    <script>
+      // Check login status on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          // Find Login and Sign Up links
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          // Create Logout link
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+            <a href="#" id="logoutLink">
+                Logout
+            </a>
+        `;
+
+          // Replace Login/Sign Up with Logout
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          // Add logout functionality
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
+    <!-- ... existing footer and scripts ... -->
+    <script src="js/vegas.min.js"></script>
+    <script>
+      // Existing Vegas slider code
+      $(function () {
+        "use strict";
+        $(".hero_kenburns").vegas({
+          slides: [
+            { src: "img/slides/1.jpg" },
+            { src: "img/slides/3.jpg" },
+            { src: "img/slides/2.jpg" },
+          ],
+          overlay: false,
+          transition: "fade2",
+          animation: "kenburnsUpRight",
+          transitionDuration: 1000,
+          delay: 5000,
+          animationDuration: 30000,
+        });
+      });
+    </script>
+
+    <!-- Add this new script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+                <a href="#" id="logoutLink">
+                    Logout
+                </a>
+            `;
+
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
+  </body>
+</html>

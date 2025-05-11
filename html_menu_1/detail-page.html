@@ -52,7 +52,8 @@
     <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet" />
 
     <!-- SPECIFIC CSS -->
-    <link href="css/date_picker.css" rel="stylesheet" />
+    <!-- Add this AFTER your other CSS links but BEFORE custom.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet" />
@@ -85,7 +86,7 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="grid-list.html">Doctors</a></li>
-                <li><a href="detail-page1.html">Appointment</a></li>
+                <li><a href="detail-page.html">Appointment</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -180,7 +181,8 @@
                 <div class="col-lg-7">
                   <div class="form-group">
                     <div id="calendar"></div>
-                    <input type="hidden" id="my_hidden_input" />
+                    <input type="hidden" id="my_hidden_input">
+                    <input type="hidden" id="appointment_date">
                     <ul class="legend">
                       <li><strong></strong>Available</li>
                       <li><strong></strong>Not available</li>
@@ -377,6 +379,7 @@
                 
               </ul>
               <hr />
+              <input type="hidden" id="doctor_name" name="doctor_name">
               <div class="text-center">
               <button id="bookNowBtn" class="btn_1 medium">Book Now</button>
               </div>
@@ -767,7 +770,7 @@
     </main>
     <!-- /main -->
 
-   <footer>
+    <footer>
       <div class="container margin_60_35">
         <div class="row">
           <div class="col-lg-3 col-md-12">
@@ -797,7 +800,7 @@
             <ul class="links">
               <li><a href="grid-list.html">Doctors</a></li>
               <li><a href="grid-list.html">Specialization</a></li>
-              <li><a href="#0">Join as a Doctor</a></li>
+              <li><a href="register-doctor.html">Join as a Doctor</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-4">
@@ -818,19 +821,19 @@
               <h5>Follow us</h5>
               <ul>
                 <li>
-                  <a href="#0"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-tiktok"></i></a>
+                  <a href="https://www.tiktok.com/"><i class="bi bi-tiktok"></i></a>
                 </li>
                 <li>
-                  <a href="#0"><i class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
                 </li>
               </ul>
             </div>
@@ -841,8 +844,8 @@
         <div class="row">
           <div class="col-md-8">
             <ul id="additional_links">
-              <li><a href="#0">Terms and conditions</a></li>
-              <li><a href="#0">Privacy</a></li>
+              <li><a href="terms.html">Terms and conditions</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -858,26 +861,14 @@
 
     <!-- COMMON SCRIPTS -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
 
     <!-- SPECIFIC SCRIPTS -->
-    <script src="js/bootstrap-datepicker.js"></script>
+    
     <script>
-      $("#calendar").datepicker({
-        todayHighlight: true,
-        daysOfWeekDisabled: [0],
-        weekStart: 1,
-        format: "yyyy-mm-dd",
-        datesDisabled: [
-          "2017/10/20",
-          "2017/11/21",
-          "2017/12/21",
-          "2018/01/21",
-          "2018/02/21",
-          "2018/03/21",
-        ],
-      });
+
     </script>
 <script>
   $(document).ready(function() {
@@ -1011,44 +1002,75 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     </script>
 <script>
-document.getElementById('bookNowBtn').addEventListener('click', function() {
+document.getElementById('bookNowBtn').addEventListener('click', async function() {
     try {
-        // Validate selections
-        const selectedTime = document.querySelector('input[name="radio_time"]:checked');
-        const selectedTreatments = document.querySelectorAll('input[type="checkbox"]:checked');
+        // Get required elements
+        const dateInput = document.getElementById('my_hidden_input');
+        const timeInput = document.querySelector('input[name="radio_time"]:checked');
+        const treatmentInputs = document.querySelectorAll('input[type="checkbox"]:checked');
 
-        if (!selectedTime) {
-            alert('Please select a time slot');
-            return;
-        }
-        
-        if (selectedTreatments.length === 0) {
-            alert('Please select at least one treatment');
-            return;
-        }
+        // Validate elements
+        if (!dateInput || !dateInput.value) throw new Error('Please select a date');
+        if (!timeInput) throw new Error('Please select a time slot');
+        if (treatmentInputs.length === 0) throw new Error('Please select at least one treatment');
 
-        // Collect data
+        // Prepare treatments array
+        const treatments = Array.from(treatmentInputs).map(input => ({
+            name: input.nextElementSibling.textContent
+                        .split(/(\d+)/)[0].trim(),
+            price: parseInt(input.nextElementSibling.querySelector('strong').textContent.replace(/,/g, ''))
+        }));
+
+        // Prepare payload
         const appointmentData = {
-            doctor: {
-                name: document.querySelector('.box_profile h1').innerText,
-                specialty: document.querySelector('.box_profile small').innerText
-            },
-            date: document.querySelector('#my_hidden_input').value,
-            time: selectedTime.value,
-            treatments: Array.from(selectedTreatments).map(checkbox => ({
-                name: checkbox.nextElementSibling.textContent.trim().split(' ')[0],
-                price: parseInt(checkbox.nextElementSibling.querySelector('strong').textContent.replace(/,/g, ''))
-            }))
+            firstname: document.getElementById('firstname_booking').value,
+            lastname: document.getElementById('lastname_booking').value,
+            email: document.getElementById('email_booking').value,
+            phone: document.getElementById('telephone_booking').value,
+            doctor: document.querySelector('.box_profile h1').textContent,
+            date: dateInput.value,
+            time: timeInput.value,
+            treatments: treatments,
+            bookedAt: new Date().toISOString()
         };
 
-        // Store and redirect
-        sessionStorage.setItem('currentAppointment', JSON.stringify(appointmentData));
-        window.location.href = 'booking-page.html';
+        // Send to server
+        const response = await fetch('/api/appointments', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(appointmentData)
+        });
+
+        if (!response.ok) {
+            const error = await response.text();
+            throw new Error(error || 'Booking failed');
+        }
+
+        alert('Appointment booked successfully!');
+        window.location.href = 'confirm.html';
 
     } catch (error) {
         console.error('Booking error:', error);
-        alert('Error processing booking. Please try again.');
+        alert(error.message);
     }
+});
+</script>
+<!-- Add this AFTER jQuery but BEFORE your custom scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Calendar initialization
+    $('#calendar').datepicker({
+        format: 'yyyy-mm-dd',
+        todayHighlight: true,
+        daysOfWeekDisabled: [0],
+        weekStart: 1,
+        autoclose: true
+    }).on('changeDate', function(e) {
+        const formattedDate = e.format('yyyy-mm-dd');
+        $('#my_hidden_input').val(formattedDate);
+        $('#appointment_date').val(formattedDate);
+    });
 });
 </script>
   </body>
