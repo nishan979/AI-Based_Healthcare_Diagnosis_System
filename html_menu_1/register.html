@@ -101,17 +101,19 @@
       <div class="bg_color_2">
         <div class="container margin_60_35">
           <div id="register">
-            <h1>Please register to Findoctor!</h1>
+            <h1>Please register to DocExpress!</h1>
             <div class="row justify-content-center">
               <div class="col-md-5">
-                <form>
+                <form id="registrationForm">
                   <div class="box_form">
                     <div class="form-group">
                       <label>Name</label>
                       <input
                         type="text"
                         class="form-control"
+                        id="firstName"
                         placeholder="Your name"
+                        required
                       />
                     </div>
                     <div class="form-group">
@@ -119,7 +121,9 @@
                       <input
                         type="text"
                         class="form-control"
+                        id="lastName"
                         placeholder="Your last name"
+                        required
                       />
                     </div>
                     <div class="form-group">
@@ -127,7 +131,9 @@
                       <input
                         type="email"
                         class="form-control"
+                        id="email"
                         placeholder="Your email address"
+                        required
                       />
                     </div>
                     <div class="form-group">
@@ -135,9 +141,9 @@
                       <input
                         type="password"
                         class="form-control"
-                        id="password1"
-                        name="password1"
+                        id="password"
                         placeholder="Your password"
+                        required
                       />
                     </div>
                     <div class="form-group">
@@ -145,9 +151,9 @@
                       <input
                         type="password"
                         class="form-control"
-                        id="password2"
-                        name="password2"
+                        id="confirmPassword"
                         placeholder="Confirm password"
+                        required
                       />
                     </div>
                     <div id="pass-info" class="clearfix"></div>
@@ -156,11 +162,11 @@
                         <input
                           type="checkbox"
                           value="accept_2"
-                          id="check_2"
-                          name="check_2"
-                          checked
+                          id="terms"
+                          name="terms"
+                          required
                         />
-                        <label for="check_2"
+                        <label for="terms"
                           ><span
                             >I Agree to the
                             <strong>Terms &amp; Conditions</strong></span
@@ -169,22 +175,15 @@
                       </div>
                     </div>
                     <div class="form-group text-center add_top_30">
-                      <input class="btn_1" type="submit" value="Submit" />
+                      <button class="btn_1" type="submit">Submit</button>
                     </div>
                   </div>
-                  <p class="text-center">
-                    <small
-                      >Has voluptua vivendum accusamus cu. Ut per assueverit
-                      temporibus dissentiet. Eum no atqui putant democritum,
-                      velit nusquam sententiae vis no.</small
-                    >
-                  </p>
+                  <div id="formMessage" class="text-center mt-3"></div>
                 </form>
+                <!-- ... rest of the form ... -->
               </div>
             </div>
-            <!-- /row -->
           </div>
-          <!-- /register -->
         </div>
       </div>
     </main>
@@ -269,7 +268,7 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <div id="copy">© 2023 Findoctor</div>
+            <div id="copy">© 2025 DocExpress</div>
           </div>
         </div>
       </div>
@@ -286,5 +285,150 @@
 
     <!-- SPECIFIC SCRIPTS -->
     <script src="js/pw_strenght.js"></script>
+    <!-- <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const userData = {
+            id: Date.now(),
+            firstName: document.getElementById("firstName").value.trim(),
+            lastName: document.getElementById("lastName").value.trim(),
+            email: document.getElementById("email").value.trim().toLowerCase(),
+            password: document.getElementById("password").value,
+            registeredAt: new Date().toISOString(),
+          };
+
+          // Validation
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+          const termsAccepted = document.getElementById("terms").checked;
+          const messageEl = document.getElementById("formMessage");
+
+          // Clear previous messages
+          messageEl.textContent = "";
+          messageEl.classList.remove("text-success", "text-danger");
+
+          // Simple validation
+          if (!termsAccepted) {
+            showMessage("Please accept the terms & conditions", "error");
+            return;
+          }
+
+          if (userData.password !== confirmPassword) {
+            showMessage("Passwords do not match", "error");
+            return;
+          }
+
+          // Save user data
+          saveUserData(userData);
+        });
+
+      function saveUserData(userData) {
+        // Get existing users or initialize array
+        let users = JSON.parse(localStorage.getItem("users") || "[]");
+
+        // Check if email already exists
+        const emailExists = users.some((user) => user.email === userData.email);
+        if (emailExists) {
+          showMessage("Email already registered", "error");
+          return;
+        }
+
+        // Add new user
+        users.push(userData);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        showMessage(
+          "Registration successful! Redirecting to login...",
+          "success"
+        );
+
+        // Redirect after delay
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 2000);
+      }
+
+      function showMessage(message, type) {
+        const messageEl = document.getElementById("formMessage");
+        messageEl.textContent = message;
+        messageEl.className = `text-${type === "error" ? "danger" : "success"}`;
+      }
+    </script> -->
+
+    <!-- Add this style for messages -->
+    <style>
+      .text-success {
+        color: #28a745;
+      }
+      .text-danger {
+        color: #dc3545;
+      }
+      #formMessage {
+        margin-top: 15px;
+      }
+    </style>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const userData = {
+            firstName: document.getElementById("firstName").value.trim(),
+            lastName: document.getElementById("lastName").value.trim(),
+            email: document.getElementById("email").value.trim().toLowerCase(),
+            password: document.getElementById("password").value,
+          };
+
+          // Validation
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+          const termsAccepted = document.getElementById("terms").checked;
+          const messageEl = document.getElementById("formMessage");
+
+          messageEl.textContent = "";
+          messageEl.classList.remove("success", "error");
+
+          if (!termsAccepted) {
+            showMessage("Please accept the terms & conditions", "error");
+            return;
+          }
+
+          if (userData.password !== confirmPassword) {
+            showMessage("Passwords do not match", "error");
+            return;
+          }
+
+          try {
+            const response = await fetch("http://localhost:3000/register", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(userData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+              showMessage("Registration successful! Redirecting...", "success");
+              setTimeout(() => (window.location.href = "login.html"), 2000);
+            } else {
+              showMessage(result.error || "Registration failed", "error");
+            }
+          } catch (error) {
+            showMessage("Network error - please try again", "error");
+          }
+        });
+
+      function showMessage(message, type) {
+        const messageEl = document.getElementById("formMessage");
+        messageEl.textContent = message;
+        messageEl.className = type;
+      }
+    </script>
   </body>
 </html>

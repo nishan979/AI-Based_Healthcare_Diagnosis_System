@@ -113,9 +113,9 @@
         <div class="row">
           <div class="col-xl-8 col-lg-8">
             <div class="box_general_3 cart">
-              <div class="message">
+              <!-- <div class="message">
                 <p>Exisitng Customer? <a href="#0">Click here to login</a></p>
-              </div>
+              </div> -->
               <div class="form_title">
                 <h3><strong>1</strong>Your Details</h3>
                 <p>Mussum ipsum cacilds, vidis litro abertis.</p>
@@ -520,7 +520,7 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <div id="copy">© 2023 Findoctor</div>
+            <div id="copy">© 2025 DocExpress</div>
           </div>
         </div>
       </div>
@@ -534,5 +534,153 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
+    <script>
+      // Check login status on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          // Find Login and Sign Up links
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          // Create Logout link
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+            <a href="#" id="logoutLink">
+                Logout
+            </a>
+        `;
+
+          // Replace Login/Sign Up with Logout
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          // Add logout functionality
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
+    <!-- ... existing footer and scripts ... -->
+    <script src="js/vegas.min.js"></script>
+    <script>
+      // Existing Vegas slider code
+      $(function () {
+        "use strict";
+        $(".hero_kenburns").vegas({
+          slides: [
+            { src: "img/slides/1.jpg" },
+            { src: "img/slides/3.jpg" },
+            { src: "img/slides/2.jpg" },
+          ],
+          overlay: false,
+          transition: "fade2",
+          animation: "kenburnsUpRight",
+          transitionDuration: 1000,
+          delay: 5000,
+          animationDuration: 30000,
+        });
+      });
+    </script>
+
+    <!-- Add this new script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+                <a href="#" id="logoutLink">
+                    Logout
+                </a>
+            `;
+
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          // Check authentication
+          const userRaw = localStorage.getItem("currentUser");
+          if (!userRaw) {
+            window.location.href = "login.html";
+            return;
+          }
+          const user = JSON.parse(userRaw);
+
+          // Get appointment data
+          const appointmentRaw = sessionStorage.getItem("currentAppointment");
+          if (!appointmentRaw) {
+            throw new Error("Session expired - please start over");
+          }
+          const appointment = JSON.parse(appointmentRaw);
+
+          // Fetch user details
+          const response = await fetch(`/api/user?id=${user.id}`);
+          if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.error || "Failed to load user data");
+          }
+          const userDetails = await response.json();
+
+          // Populate form fields
+          document.getElementById("firstname_booking").value =
+            userDetails.name.split(" ")[0] || "";
+          document.getElementById("lastname_booking").value =
+            userDetails.name.split(" ").slice(1).join(" ") || "";
+          document.getElementById("email_booking").value = userDetails.email;
+          document.getElementById("email_booking_2").value = userDetails.email;
+          document.getElementById("telephone_booking").value =
+            userDetails.phone || "";
+
+          // Populate booking summary
+          document.querySelectorAll(".summary strong")[0].textContent =
+            appointment.date;
+          document.querySelectorAll(".summary strong")[1].textContent =
+            appointment.time;
+          document.querySelectorAll(".summary strong")[2].textContent =
+            appointment.doctor.name;
+
+          // Rest of your code...
+        } catch (error) {
+          console.error("Error:", error);
+          alert(error.message);
+          window.location.href = "index.html";
+        }
+      });
+    </script>
   </body>
 </html>

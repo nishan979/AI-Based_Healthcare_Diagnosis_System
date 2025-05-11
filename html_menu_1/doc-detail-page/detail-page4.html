@@ -7,9 +7,9 @@
       name="description"
       content="Find easily a doctor and book online an appointment"
     />
-    <meta name="author" content="Nishan" />
+    <meta name="author" content="Ansonika" />
     <title>
-      DocExpress - Find easily a doctor and book online an appointment
+      FINDOCTOR - Find easily a doctor and book online an appointment
     </title>
 
     <!-- Favicons-->
@@ -72,7 +72,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <div id="logo_home">
-              <h1><a href="index.html" title="Findoctor">DocExpress</a></h1>
+              <h1><a href="index.html" title="Findoctor">Findoctor</a></h1>
             </div>
           </div>
           <nav class="col-lg-9 col-6">
@@ -85,7 +85,7 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="grid-list.html">Doctors</a></li>
-                <li><a href="detail-page1.html">Appointment</a></li>
+                <li><a href="detail-page.html">Appointment</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -117,10 +117,14 @@
           <aside class="col-xl-3 col-lg-4" id="sidebar">
             <div class="box_profile">
               <figure>
-                <img src="img\doctors\doc1.png" alt="" class="img-fluid" />
+                <img
+                  src="http://via.placeholder.com/565x565.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
               </figure>
-              <small>Medicine and Cardiology</small>
-              <h1>Prof. Dr. Shishir Basak</h1>
+              <small>Primary care - Internist</small>
+              <h1>DR. Julia Jhones</h1>
               <span class="rating">
                 <i class="icon_star voted"></i>
                 <i class="icon_star voted"></i>
@@ -148,12 +152,11 @@
               <ul class="contacts">
                 <li>
                   <h6>Address</h6>
-                  Mount Adora Hospital, <br />
-                  Akhalia Madina Market, Sylhet, 3100
+                  859 60th, Brooklyn, NY, 11220
                 </li>
                 <li>
                   <h6>Phone</h6>
-                  <a href="tel://8801726450182">+8801726450182</a>
+                  <a href="tel://000434323342">+00043 4323342</a>
                 </li>
               </ul>
               <div class="text-center">
@@ -317,7 +320,7 @@
                       name="visit1"
                     />
                     <label for="visit1" class="css-label"
-                      >New Patient Consultation <strong>	3,500</strong></label
+                      >Back Pain visit <strong>$55</strong></label
                     >
                   </div>
                 </li>
@@ -330,7 +333,7 @@
                       name="visit2"
                     />
                     <label for="visit2" class="css-label"
-                      >Follow-Up Visit <strong>2,000</strong></label
+                      >Cardiovascular screen <strong>$55</strong></label
                     >
                   </div>
                 </li>
@@ -343,7 +346,7 @@
                       name="visit3"
                     />
                     <label for="visit3" class="css-label"
-                      >Comprehensive Cardiac Check-Up <strong>6,000</strong></label
+                      >Diabetes consultation <strong>$55</strong></label
                     >
                   </div>
                 </li>
@@ -356,7 +359,7 @@
                       name="visit4"
                     />
                     <label for="visit4" class="css-label"
-                      >Echocardiogram <strong>4,500</strong></label
+                      >Icontinence visit <strong>$55</strong></label
                     >
                   </div>
                 </li>
@@ -369,16 +372,53 @@
                       name="visit5"
                     />
                     <label for="visit5" class="css-label"
-                      >Stress Test (TMT) <strong>2,500</strong></label
+                      >Foot Pain visit <strong>$55</strong></label
                     >
                   </div>
                 </li>
-
-                
+                <li>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      class="css-checkbox"
+                      id="visit6"
+                      name="visit6"
+                    />
+                    <label for="visit6" class="css-label"
+                      >Food intollerance visit <strong>$55</strong></label
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      class="css-checkbox"
+                      id="visit7"
+                      name="visit7"
+                    />
+                    <label for="visit7" class="css-label"
+                      >Neck Pain visit <strong>$55</strong></label
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="checkbox">
+                    <input
+                      type="checkbox"
+                      class="css-checkbox"
+                      id="visit8"
+                      name="visit8"
+                    />
+                    <label for="visit8" class="css-label"
+                      >Back Pain visit <strong>$55</strong></label
+                    >
+                  </div>
+                </li>
               </ul>
               <hr />
               <div class="text-center">
-              <button id="bookNowBtn" class="btn_1 medium">Book Now</button>
+                <a href="booking-page.html" class="btn_1 medium">Book Now</a>
               </div>
             </div>
             <!-- /box_general -->
@@ -397,7 +437,7 @@
                     >General info</a
                   >
                 </li>
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                   <a
                     class="nav-link"
                     id="reviews-tab"
@@ -407,7 +447,7 @@
                     aria-controls="reviews"
                     >Reviews</a
                   >
-                </li> -->
+                </li>
               </ul>
               <!--/nav-tabs -->
 
@@ -419,46 +459,41 @@
                   aria-labelledby="general-tab"
                 >
                   <p class="lead add_bottom_30">
-                    Prof. Dr. Shishir Basak is a renowned cardiologist in
-                    Bangladesh with over 15 years of experience in advanced
-                    cardiac care. Dedicated to patient well-being, he combines
-                    international expertise with personalized treatment plans
-                    tailored to the needs of Bangladeshi patients
+                    Sed pretium, ligula sollicitudin laoreet viverra, tortor
+                    libero sodales leo, eget blandit nunc tortor eu nibh. Lorem
+                    ipsum dolor sit amet, consectetuer adipiscing elit.
                   </p>
                   <div class="indent_title_in">
                     <i class="pe-7s-user"></i>
                     <h3>Professional statement</h3>
-                    <p>
-                      I strive to deliver world-class cardiac care accessible to
-                      all. My practice focuses on accurate diagnosis,
-                      compassionate communication, and sustainable heart health
-                      solutions for every patient.
-                    </p>
+                    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
                   </div>
                   <div class="wrapper_indent">
                     <p>
-                      Trained in the UK and Bangladesh, Dr. Basak specializes in
-                      both preventive cardiology and complex interventions,
-                      ensuring comprehensive care for conditions like
-                      hypertension, heart failure, and coronary artery disease.
+                      Sed pretium, ligula sollicitudin laoreet viverra, tortor
+                      libero sodales leo, eget blandit nunc tortor eu nibh.
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                      Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
+                      In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
+                      Nullam mollis. Phasellus hendrerit. Pellentesque aliquet
+                      nibh nec urna. In nisi neque, aliquet vel, dapi.
                     </p>
                     <h6>Specializations</h6>
                     <div class="row">
                       <div class="col-lg-6">
                         <ul class="bullets">
-                          <li>Interventional Cardiology</li>
-                          <li>Preventive Cardiology</li>
-                          <li>Heart Failure & Arrhythmia Treatment</li>
-                          <li>Echocardiography & Non-Invasive Testing</li>
-                          <li>Hypertension & Diabetes-Related Heart Care</li>
-                        </ul>
-                      </div>
-                      <div class="col-lg-6">
-                        <!-- <ul class="bullets">
                           <li>Abdominal Radiology</li>
                           <li>Addiction Psychiatry</li>
                           <li>Adolescent Medicine</li>
-                          <li>Cardiothoracic Radiology</li> -->
+                          <li>Cardiothoracic Radiology</li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-6">
+                        <ul class="bullets">
+                          <li>Abdominal Radiology</li>
+                          <li>Addiction Psychiatry</li>
+                          <li>Adolescent Medicine</li>
+                          <li>Cardiothoracic Radiology</li>
                         </ul>
                       </div>
                     </div>
@@ -471,25 +506,28 @@
                   <div class="indent_title_in">
                     <i class="pe-7s-news-paper"></i>
                     <h3>Education</h3>
-                    <!-- <p>Mussum ipsum cacilds, vidis litro abertis.</p> -->
+                    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
                   </div>
                   <div class="wrapper_indent">
-                    <!-- <p>
+                    <p>
                       Phasellus hendrerit. Pellentesque aliquet nibh nec urna.
                       In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
                       Nullam mollis. Phasellus hendrerit. Pellentesque aliquet
                       nibh nec urna. In nisi neque, aliquet vel, dapi.
-                    </p> -->
-                    <!-- <h6>Curriculum</h6> -->
+                    </p>
+                    <h6>Curriculum</h6>
                     <ul class="list_edu">
                       <li>
-                        <strong>Dhaka University, Bangladesh</strong> - MD (Cardiology)
+                        <strong>New York Medical College</strong> - Doctor of
+                        Medicine
                       </li>
                       <li>
-                        <strong>Royal College of Physicians, London</strong> - MRCP (UK)
+                        <strong>Montefiore Medical Center</strong> - Residency
+                        in Internal Medicine
                       </li>
                       <li>
-                        <strong>Dhaka Medical College Hospital</strong> - Residency in Internal Medicine
+                        <strong>New York Medical College</strong> - Master
+                        Internal Medicine
                       </li>
                     </ul>
                   </div>
@@ -500,43 +538,47 @@
                   <div class="indent_title_in">
                     <i class="pe-7s-cash"></i>
                     <h3>Prices &amp; Payments</h3>
-                    
+                    <p>Mussum ipsum cacilds, vidis litro abertis.</p>
                   </div>
                   <div class="wrapper_indent">
                     <p>
-                      Dr. Basak offers competitive pricing for consultations and
-                      treatments, ensuring quality care is accessible to all.
-                      Payment options include cash, credit/debit cards, and
-                      insurance plans. For detailed pricing, please contact the
-                      clinic directly.
+                      Zril causae ancillae sit ea. Dicam veritus mediocritatem
+                      sea ex, nec id agam eius. Te pri facete latine salutandi,
+                      scripta mediocrem et sed, cum ne mundi vulputate. Ne his
+                      sint graeco detraxit, posse exerci volutpat has in.
+                    </p>
                     <div class="table-responsive">
                       <table class="table table-striped">
                         <thead>
                           <tr>
                             <th>Service - Visit</th>
-                            <th>Fee (BDT)</th>
+                            <th>Price</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>New Patient Consultation</td>
-                            <td>3,500</td>
+                            <td>New patient visit</td>
+                            <td>$34</td>
                           </tr>
                           <tr>
-                            <td>Follow-Up Visit</td>
-                            <td>2,000</td>
+                            <td>General consultation</td>
+                            <td>$60</td>
                           </tr>
                           <tr>
-                            <td>Comprehensive Cardiac Check-Up</td>
-                            <td>6,000</td>
+                            <td>Back Pain</td>
+                            <td>$40</td>
                           </tr>
                           <tr>
-                            <td>Echocardiogram</td>
-                            <td>4,500</td>
+                            <td>Diabetes Consultation</td>
+                            <td>$55</td>
                           </tr>
                           <tr>
-                            <td>Stress Test (TMT)</td>
-                            <td>2,500</td>
+                            <td>Eating disorder</td>
+                            <td>$60</td>
+                          </tr>
+                          <tr>
+                            <td>Foot Pain</td>
+                            <td>$35</td>
                           </tr>
                         </tbody>
                       </table>
@@ -767,7 +809,7 @@
     </main>
     <!-- /main -->
 
-   <footer>
+    <footer>
       <div class="container margin_60_35">
         <div class="row">
           <div class="col-lg-3 col-md-12">
@@ -846,7 +888,7 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <div id="copy">© 2025 DocExpress</div>
+            <div id="copy">© 2023 Findoctor</div>
           </div>
         </div>
       </div>
@@ -879,177 +921,5 @@
         ],
       });
     </script>
-<script>
-  $(document).ready(function() {
-    // Get doctor ID from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const doctorId = parseInt(urlParams.get('doctorId'));
-
-    // Fetch doctor data
-    $.getJSON('doctors.json', function(data) {
-      const doctor = data.doctors.find(d => d.id === doctorId);
-      if (!doctor) {
-        console.error("Doctor not found");
-        return;
-      }
-
-      // Update Profile Section
-      $('.box_profile img').attr('src', doctor.image);
-      $('.box_profile small').text(doctor.specialty);
-      $('.box_profile h1').text(doctor.name);
-      $('.rating small').text(`(${doctor.rating})`);
-
-      // Update Contact Info
-      $('.contacts li:first-child').html(`
-        <h6>Address</h6>
-        ${doctor.hospital}<br>${doctor.address}
-      `);
-      $('.contacts li:nth-child(2) a')
-        .attr('href', `tel:${doctor.appointment.phone}`)
-        .text(doctor.appointment.phone);
-
-      // Update Professional Info
-      $('.lead.add_bottom_30').text(doctor.bio);
-      $('.indent_title_in:has(.pe-7s-user) + p').text(doctor.statement);
-
-      // Update Education
-      const qualifications = doctor.qualifications.split(', ');
-      $('.list_edu').html(
-        qualifications.map(q => `<li><strong>${q}</strong></li>`).join('')
-      );
-
-      // Update Breadcrumb
-      $('#breadcrumb li:last-child').text(doctor.name);
-
-    }).fail(function(jqxhr, textStatus, error) {
-      console.error("Error loading doctor data:", error);
-    });
-  });
-</script>
-<script>
-// Check login status on page load
-document.addEventListener('DOMContentLoaded', function() {
-    const currentUser = localStorage.getItem('currentUser');
-    const navMenu = document.querySelector('.main-menu ul');
-    
-    if (currentUser) {
-        // Find Login and Sign Up links
-        const loginItem = document.querySelector('a[href="login.html"]').parentElement;
-        const signupItem = document.querySelector('a[href="register.html"]').parentElement;
-
-        // Create Logout link
-        const logoutItem = document.createElement('li');
-        logoutItem.innerHTML = `
-            <a href="#" id="logoutLink">
-                Logout
-            </a>
-        `;
-
-        // Replace Login/Sign Up with Logout
-        navMenu.removeChild(loginItem);
-        navMenu.removeChild(signupItem);
-        navMenu.appendChild(logoutItem);
-
-        // Add logout functionality
-        document.getElementById('logoutLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            localStorage.removeItem('currentUser');
-            window.location.href = 'login.html';
-        });
-    }
-});
-</script>
-    <!-- ... existing footer and scripts ... -->
-    <script src="js/vegas.min.js"></script>
-    <script>
-      // Existing Vegas slider code
-      $(function () {
-        "use strict";
-        $(".hero_kenburns").vegas({
-          slides: [
-            { src: "img/slides/1.jpg" },
-            { src: "img/slides/3.jpg" },
-            { src: "img/slides/2.jpg" },
-          ],
-          overlay: false,
-          transition: "fade2",
-          animation: "kenburnsUpRight",
-          transitionDuration: 1000,
-          delay: 5000,
-          animationDuration: 30000,
-        });
-      });
-    </script>
-
-    <!-- Add this new script -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentUser = localStorage.getItem('currentUser');
-        const navMenu = document.querySelector('.main-menu ul');
-        
-        if (currentUser) {
-            const loginItem = document.querySelector('a[href="login.html"]').parentElement;
-            const signupItem = document.querySelector('a[href="register.html"]').parentElement;
-
-            const logoutItem = document.createElement('li');
-            logoutItem.innerHTML = `
-                <a href="#" id="logoutLink">
-                    Logout
-                </a>
-            `;
-
-            navMenu.removeChild(loginItem);
-            navMenu.removeChild(signupItem);
-            navMenu.appendChild(logoutItem);
-
-            document.getElementById('logoutLink').addEventListener('click', function(e) {
-                e.preventDefault();
-                localStorage.removeItem('currentUser');
-                window.location.href = 'login.html';
-            });
-        }
-    });
-    </script>
-<script>
-document.getElementById('bookNowBtn').addEventListener('click', function() {
-    try {
-        // Validate selections
-        const selectedTime = document.querySelector('input[name="radio_time"]:checked');
-        const selectedTreatments = document.querySelectorAll('input[type="checkbox"]:checked');
-
-        if (!selectedTime) {
-            alert('Please select a time slot');
-            return;
-        }
-        
-        if (selectedTreatments.length === 0) {
-            alert('Please select at least one treatment');
-            return;
-        }
-
-        // Collect data
-        const appointmentData = {
-            doctor: {
-                name: document.querySelector('.box_profile h1').innerText,
-                specialty: document.querySelector('.box_profile small').innerText
-            },
-            date: document.querySelector('#my_hidden_input').value,
-            time: selectedTime.value,
-            treatments: Array.from(selectedTreatments).map(checkbox => ({
-                name: checkbox.nextElementSibling.textContent.trim().split(' ')[0],
-                price: parseInt(checkbox.nextElementSibling.querySelector('strong').textContent.replace(/,/g, ''))
-            }))
-        };
-
-        // Store and redirect
-        sessionStorage.setItem('currentAppointment', JSON.stringify(appointmentData));
-        window.location.href = 'booking-page.html';
-
-    } catch (error) {
-        console.error('Booking error:', error);
-        alert('Error processing booking. Please try again.');
-    }
-});
-</script>
   </body>
 </html>

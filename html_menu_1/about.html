@@ -510,5 +510,101 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
+    <script>
+      // Check login status on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          // Find Login and Sign Up links
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          // Create Logout link
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+            <a href="#" id="logoutLink">
+                Logout
+            </a>
+        `;
+
+          // Replace Login/Sign Up with Logout
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          // Add logout functionality
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
+    <!-- ... existing footer and scripts ... -->
+    <script src="js/vegas.min.js"></script>
+    <script>
+      // Existing Vegas slider code
+      $(function () {
+        "use strict";
+        $(".hero_kenburns").vegas({
+          slides: [
+            { src: "img/slides/1.jpg" },
+            { src: "img/slides/3.jpg" },
+            { src: "img/slides/2.jpg" },
+          ],
+          overlay: false,
+          transition: "fade2",
+          animation: "kenburnsUpRight",
+          transitionDuration: 1000,
+          delay: 5000,
+          animationDuration: 30000,
+        });
+      });
+    </script>
+
+    <!-- Add this new script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = localStorage.getItem("currentUser");
+        const navMenu = document.querySelector(".main-menu ul");
+
+        if (currentUser) {
+          const loginItem = document.querySelector(
+            'a[href="login.html"]'
+          ).parentElement;
+          const signupItem = document.querySelector(
+            'a[href="register.html"]'
+          ).parentElement;
+
+          const logoutItem = document.createElement("li");
+          logoutItem.innerHTML = `
+                <a href="#" id="logoutLink">
+                    Logout
+                </a>
+            `;
+
+          navMenu.removeChild(loginItem);
+          navMenu.removeChild(signupItem);
+          navMenu.appendChild(logoutItem);
+
+          document
+            .getElementById("logoutLink")
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+              localStorage.removeItem("currentUser");
+              window.location.href = "login.html";
+            });
+        }
+      });
+    </script>
   </body>
 </html>

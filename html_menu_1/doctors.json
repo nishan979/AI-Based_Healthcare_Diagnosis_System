@@ -1,0 +1,113 @@
+{
+  "website": "DocExpress",
+  "author": "Nishan",
+  "hospital": {
+    "name": "Mount Adora Hospital",
+    "address": "Akhalia Madina Market, Sylhet, 3100",
+    "map_link": "https://www.google.com/maps/place/Mount+Adora+Hospital,+Akhalia,+Sylhet/@24.9096197,91.8415289,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x37505544775d6bf9:0xcec939c657524489!2sMount+Adora+Hospital,+Akhalia,+Sylhet,+1+Sylhet+-+Sunamganj+Hwy,+Sylhet+3100!2m2!1d91.8441092!2d24.9096149!3m5!1s0x37505544775d6bf9:0xcec939c657524489!8m2!3d24.9096149!4d91.8441092!16s%2Fg%2F11fy2ysw0x?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+  },
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Prof. Dr. Shishir Basak",
+      "specialty": "Medicine and Cardiology",
+      "qualifications": "MBBS, MCPS (Medicine), MRCP(UK), D.Card (DU), MD (Cardiology)",
+      "hospital": "Mount Adora Hospital, Akhalia",
+      "address": "Madina Market, Sylhet, 3100",
+      "visit_time": "Everyday from 4:30 PM to 9:30 PM (except Friday, Saturday & Govt. Holiday)",
+      "bio": "Renowned cardiologist with 15+ years experience in advanced cardiac care. Specialist in preventive cardiology and complex interventions, providing comprehensive care for hypertension, heart failure, and coronary artery disease.",
+      "statement": "I strive to deliver world-class cardiac care accessible to all, focusing on accurate diagnosis and sustainable heart health solutions.",
+      "rating": 145,
+      "appointment": {
+        "phone": "+8801726450182",
+        "call_hours": "From 10:30AM"
+      },
+      "image": "img/doctors/doc1.png"
+    },
+    {
+      "id": 2,
+      "name": "Prof. Dr. Md. Nazrul Islam",
+      "specialty": "Neuro Medicine Specialist",
+      "qualifications": "MBBS, MCPS (Medicine), MD(Neurology)",
+      "hospital": "Mount Adora Hospital, Akhalia",
+      "address": "Madina Market, Sylhet, 3100",
+      "visit_time": "Everyday from 3:00 PM to 8:00 PM except Friday",
+      "bio": "Leading neurophysician with expertise in managing complex neurological disorders including epilepsy, stroke, and movement disorders.",
+      "statement": "Committed to providing patient-centered neurological care through cutting-edge diagnostics and evidence-based treatments.",
+      "rating": 145,
+      "appointment": {
+        "phone": "+8801730658880",
+        "call_hours": "Call within 9am-10am"
+      },
+      "image": "img/doctors/doc2.png"
+    },
+    {
+      "id": 3,
+      "name": "Prof. Dr. Muhammad Shahabuddin",
+      "specialty": "Clinical & Interventional Cardiologist",
+      "qualifications": "MBBS, MD (Cardiology), FACC (USA)",
+      "hospital": "Mount Adora Hospital, Akhalia",
+      "address": "Room No - 401, Madina Market, Sylhet, 3100",
+      "visit_time": "Everyday from 3:00 PM to 10:00 PM except Friday",
+      "bio": "Pioneer in interventional cardiology procedures with international training in complex angioplasty and structural heart interventions.",
+      "statement": "Dedicated to bringing advanced cardiac interventions to our community while maintaining the highest safety standards.",
+      "rating": 145,
+      "appointment": {
+        "phone": "+8801715067019",
+        "call_hours": "From 9:00 AM to 11:00 AM (From 7:00 PM to 10:00 PM for advance appointment)"
+      },
+      "image": "img/doctors/doc3.png"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Alamgir Chowdhury",
+      "specialty": "Kidney Diseases & Medicine Specialist",
+      "qualifications": "MBBS, MCPS(Medicine), MD(Nephrology)",
+      "hospital": "Mount Adora Hospital, Akhalia",
+      "address": "Madina Market, Sylhet, 3100",
+      "visit_time": "From 6:00 PM",
+      "bio": "Expert in managing chronic kidney diseases, dialysis, and renal transplantation with focus on preventive nephrology.",
+      "statement": "Believe in holistic approach to kidney health combining lifestyle modification with advanced medical therapies.",
+      "rating": 145,
+      "appointment": {
+        "phone": "+8801713328577",
+        "call_hours": "From 9:00 AM to 10:00 AM"
+      },
+      "image": "img/doctors/doc4.png"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Rahat Amin Chowdhury",
+      "specialty": "Neurology Specialist",
+      "qualifications": "MBBS, MD(Neurology)",
+      "hospital": "Al Haramain Hospital Pvt. Ltd",
+      "address": "Kazi Tower, Samato-30, Chali Bandar, Bishwa Road, Subhani Ghat, Sylhet, 3100",
+      "visit_time": "Mon-Sat: 5:00 PM to 9:00 PM",
+      "bio": "Specialist in neuro-electrophysiology and management of headache disorders, with particular interest in neuromuscular diseases.",
+      "statement": "Committed to compassionate care for neurological conditions through accurate diagnosis and personalized treatment plans.",
+      "rating": 145,
+      "appointment": {
+        "phone": "+8801931225555",
+        "call_hours": "10:00 AM to 1:00 PM"
+      },
+      "image": "img/doctors/doc5.png"
+    },
+    {
+      "id": 6,
+      "name": "Prof. Dr. Md. Matiur Rahman",
+      "specialty": "Neuro Medicine Specialist",
+      "qualifications": "MBBS, FCPS (Medicine), MD(Neurology)",
+      "hospital": "Mount Adora Hospital, Akhalia",
+      "address": "Room No - 314, Madina Market, Sylhet, 3100",
+      "visit_time": "Everyday from 11:00 AM to 01:00 PM except Friday & Monday",
+      "bio": "Expert in cognitive neurology and neurorehabilitation, with special focus on dementia and neuro-degenerative disorders.",
+      "statement": "Dedicated to improving quality of life through comprehensive neurological care and rehabilitation strategies.",
+      "rating": 145,
+      "appointment": {
+        "phone": "+8801779101274",
+        "call_hours": "Call From 03:00 PM"
+      },
+      "image": "img/doctors/doc6.png"
+    }
+  ]
+}

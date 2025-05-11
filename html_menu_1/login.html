@@ -7,9 +7,9 @@
       name="description"
       content="Find easily a doctor and book online an appointment"
     />
-    <meta name="author" content="Ansonika" />
+    <meta name="author" content="Nishan" />
     <title>
-      FINDOCTOR - Find easily a doctor and book online an appointment
+      DocExpress - Find easily a doctor and book online an appointment
     </title>
 
     <!-- Favicons-->
@@ -69,7 +69,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <div id="logo_home">
-              <h1><a href="index.html" title="Findoctor">Findoctor</a></h1>
+              <h1><a href="index.html" title="Findoctor">DocExpress</a></h1>
             </div>
           </div>
           <nav class="col-lg-9 col-6">
@@ -101,15 +101,18 @@
       <div class="bg_color_2">
         <div class="container margin_60_35">
           <div id="login-2">
-            <h1>Please login to Findoctor!</h1>
-            <form>
+            <h1>Please login to DocExpress!</h1>
+            <!-- Change the form to this -->
+            <form id="loginForm">
               <div class="box_form clearfix">
                 <div class="box_login">
-                  <a href="#0" class="social_bt facebook"
+                  <a href="/auth/facebook" class="social_bt facebook"
                     >Login with Facebook</a
                   >
-                  <a href="#0" class="social_bt google">Login with Google</a>
-                  <a href="#0" class="social_bt linkedin"
+                  <a href="/auth/google" class="social_bt google"
+                    >Login with Google</a
+                  >
+                  <a href="/auth/linkedin" class="social_bt linkedin"
                     >Login with Linkedin</a
                   >
                 </div>
@@ -119,6 +122,8 @@
                       type="email"
                       class="form-control"
                       placeholder="Your email address"
+                      id="loginEmail"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -126,8 +131,8 @@
                       type="password"
                       class="form-control"
                       placeholder="Your password"
-                      name="password"
-                      id="password"
+                      id="loginPassword"
+                      required
                     />
                     <a href="#0" class="forgot"
                       ><small>Forgot password?</small></a
@@ -243,5 +248,44 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("loginEmail").value.trim();
+          const password = document.getElementById("loginPassword").value;
+
+          try {
+            const response = await fetch("/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, password }),
+            });
+
+            // Check if response is JSON
+            const contentType = response.headers.get("content-type");
+            if (!contentType?.includes("application/json")) {
+              const text = await response.text();
+              throw new Error(`Server error: ${text.slice(0, 50)}`);
+            }
+
+            const data = await response.json();
+
+            if (data.success) {
+              // Store user data and redirect
+              localStorage.setItem("currentUser", JSON.stringify(data.user));
+              window.location.href = data.redirect;
+            } else {
+              throw new Error(data.error || "Login failed");
+            }
+          } catch (error) {
+            console.error("Login error:", error);
+            alert(error.message.replace(/<\/?[^>]+(>|$)/g, "")); // Sanitize HTML
+            document.getElementById("loginPassword").value = "";
+          }
+        });
+    </script>
   </body>
 </html>
